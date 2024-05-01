@@ -40,6 +40,7 @@ from typing import (  # noqa: Y022
     BinaryIO,
     ClassVar,
     Generic,
+    Hashable,
     Mapping,
     MutableMapping,
     MutableSequence,
@@ -78,7 +79,7 @@ _T = TypeVar("_T")
 _T_co = TypeVar("_T_co", covariant=True)
 _T_contra = TypeVar("_T_contra", contravariant=True)
 _R_co = TypeVar("_R_co", covariant=True)
-_KT = TypeVar("_KT")
+_KT = TypeVar("_KT", bound=Hashable)
 _VT = TypeVar("_VT")
 _S = TypeVar("_S")
 _T1 = TypeVar("_T1")
